@@ -1,9 +1,9 @@
 FROM golang:latest
 
-RUN mkdir /go/src/api
+RUN mkdir /app
 
-WORKDIR /go/src/api
+WORKDIR /app
 
-ADD . /go/src/api
+COPY . /app
 
-RUN go get github.com/gin-gonic/gin
+RUN go get -u github.com/labstack/echo/...
